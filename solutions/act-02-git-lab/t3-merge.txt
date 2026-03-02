@@ -1,0 +1,40 @@
+ git checkout -b "topic"
+Switched to a new branch 'topic'
+
+echo "dino" >> mergetest.txt
+git add .\mergetest.txt
+git commit -m "add mergetest.txt file"
+output:
+[topic 83f906c] add mergetest.txt file
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergetest.txt
+ create mode 100644 test1.txt
+
+git switch master
+Switched to branch 'master'
+
+echo "dino" >> random.txt
+git add .\random.txt
+git commit -m "commit on master"
+output:
+[master 5d08907] commit on master
+ 3 files changed, 28 insertions(+)
+ create mode 100644 random.txt
+ create mode 100644 solutions/act-02-git-lab/t3-merge.txt
+
+git merge topic
+Merge made by the 'ort' strategy.
+ mergetest.txt | Bin 0 -> 14 bytes
+ test1.txt     | Bin 0 -> 14 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergetest.txt
+ create mode 100644 test1.txt
+
+git log --oneline --decorate --graph --all
+*   57aab30 (HEAD -> master) Merge branch 'topic'
+|\  
+| * 83f906c (topic) add mergetest.txt file
+* | 5d08907 commit on master
+|/  
+* a7dd365 corrected message
+* 1320ec3 Initial commit
