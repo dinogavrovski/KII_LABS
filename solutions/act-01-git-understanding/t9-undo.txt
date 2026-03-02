@@ -1,0 +1,28 @@
+git commit -m "wrong message"
+[master cd4d51e] wrong message
+ 3 files changed, 61 insertions(+)
+ create mode 100644 solutions/act-01-git-understanding/t4-version-and-config.txt
+ create mode 100644 solutions/act-01-git-understanding/t5-init-add-commit.txt
+ create mode 100644 solutions/act-01-git-understanding/t9-undo.txt
+
+ git commit --amend -m "corrected message"
+[master a7dd365] corrected message
+ Date: Mon Mar 2 13:10:46 2026 +0100
+ 3 files changed, 61 insertions(+)
+ create mode 100644 solutions/act-01-git-understanding/t4-version-and-config.txt
+ create mode 100644 solutions/act-01-git-understanding/t5-init-add-commit.txt
+ create mode 100644 solutions/act-01-git-understanding/t9-undo.txt
+
+echo "dino" > test1.txt 
+git add .\test1.txt
+git reset HEAD .\test1.txt
+git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test1.txt
+
+git add .\test1.txt
+echo "something" >> .\test1.txt
+git checkout -- .\test1.txt
+now the test1.txt file contains just one line "dino", "something" is deleted
