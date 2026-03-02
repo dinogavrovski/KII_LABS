@@ -1,0 +1,25 @@
+git remote -v
+no output
+
+git remote add origin https://github.com/dinogavrovski/KII_LABS.git
+git add .
+git commit -m "initial commit"
+[master 7474e0e] initial commit
+ 2 files changed, 40 insertions(+)
+ create mode 100644 solutions/act-02-git-lab/t5-remotes.txt
+
+git push -u origin master
+Enumerating objects: 26, done.
+Counting objects: 100% (26/26), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (26/26), 3.38 KiB | 1.13 MiB/s, done.
+Total 26 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/dinogavrovski/KII_LABS.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+git remote -v
+origin  https://github.com/dinogavrovski/KII_LABS.git (fetch)
+origin  https://github.com/dinogavrovski/KII_LABS.git (push)
